@@ -16,7 +16,7 @@ prt()
 {
     port=0
     nom=$1
-    for (( i=0; i<${$#nom}; i++ ))
+    for (( i=0; i<${#nom}; i++ ))
     do
         c=$(ord ${nom:$i:1})
         port=$(($port + $c))
