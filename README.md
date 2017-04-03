@@ -13,5 +13,5 @@ echo "message" | ./nct.sh -s username
 *when file is specified, nct stores data in specified file and quits*  
 
 ## Install
-wget https://raw.githubusercontent.com/edrflt/netcat-talk/master/nct.sh
+wget https://raw.githubusercontent.com/edrflt/netcat-talk/master/nct.sh  
 chmod +x nct.sh
