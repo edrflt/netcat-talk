@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ord()
 {
@@ -7,9 +7,9 @@ ord()
 
 hlp()
 {
-    echo "Usage :"
-    echo "nct -s username : sends stdin to username (get username with w)"
-    echo "nct -r [file name] shows messages received, if file name is specified, writes to file name and quits"
+    echo "\033[31mUsage :\033[0m"
+    echo "\033[32mnct -s username \033[0m     : sends stdin to username (get username with w)"
+    echo "\033[32mnct -r [file name] \033[0m  : shows messages received, if file name is specified, writes to file name and quits"
 }
 
 prt()
@@ -46,7 +46,11 @@ else
         then
             nc -l $port > $2
         else
-            nc -lk $port
+            while [ 1 -eq 1 ]
+            do
+                nc -l $port
+                echo "\033[31m===== END =====\033[0m"
+            done
         fi
     fi
 fi

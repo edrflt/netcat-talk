@@ -15,3 +15,6 @@ echo "message" | ./nct.sh -s username
 ## Install
 wget https://raw.githubusercontent.com/edrflt/netcat-talk/master/nct.sh  
 chmod +x nct.sh
+#### Optional alias
+Since nct.sh -s has the same syntax than write, you can set an alias
+alias write="~/nct.sh -s"
