@@ -11,3 +11,7 @@ echo "message" | ./nct.sh -s username
 ./nct.sh -r [file name]  
 *nct stays opened and shows messages on terminal*  
 *when file is specified, nct stores data in specified file and quits*  
+
+## Install
+wget https://raw.githubusercontent.com/edrflt/netcat-talk/master/nct.sh
+chmod +x nct.sh
