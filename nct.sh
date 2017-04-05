@@ -34,7 +34,7 @@ else
     then
         nom=$2
         port=$(prt $nom)
-        donnees=$(whoami)$'\n'$(cat)
+        donnees=$(cat)
 
         echo "$donnees" | nc 127.0.0.1 $port
     elif [ $1 = "-r" ]
@@ -48,17 +48,7 @@ else
         else
             while [ 1 -eq 1 ]
             do
-                k=0
-                while read line
-                do
-                    if [ $k -eq 0 ]
-                    then
-                        echo -e "\033[31m===== Message from $line =====\033[0m"
-                    else
-                        echo "$line"
-                    fi
-                    k=$(($k + 1))
-                done < <((echo "Message sent") | nc -l $port)
+                nc -l $port
                 echo -e "\033[31m===== END =====\033[0m"
             done
         fi
