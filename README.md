@@ -1,6 +1,6 @@
 # nc talk
-Talk through netcat  
-This program is useful on machines where write is not available  
+A little personal project to talk through netcat  
+This program is useful on servers where write is not available  
 
 ## Usage
 #### Sending
